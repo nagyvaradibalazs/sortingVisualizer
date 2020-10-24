@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" href="icon.png">
+	<title>Sorting Algorithm Visualizer</title>
+</head>
+<body>
+	<div class="title">
+		<h1>Sorting Algorithm Visualizer</h1>
+		<p>Select the algorithm that you want to see sorting, generate a new array, change its size, then click Sort!</p>
+	</div>
+	<div class="content">
+		<div class="left-side">
+			<div class="algorithm-selector">
+				<a class="algorithm-button" id="quickSort" onclick="changeAlgorithmType('quickSort')">Quick Sort
+					<div class="details-text">
+						<p>Time complexity: O(N*logN)</p>
+						<p>Space complexity: O(logN)</p>
+					</div>
+				</a>
+				<a class="algorithm-button" id="mergeSort" onclick="changeAlgorithmType('mergeSort')">Merge Sort
+					<div class="details-text">
+						<p>Time complexity: O(N*logN)</p>
+						<p>Space complexity: O(N)</p>
+					</div>
+				</a>
+				<a class="algorithm-button" id="bubbleSort" onclick="changeAlgorithmType('bubbleSort')">Bubble Sort
+					<div class="details-text">
+						<p>Time complexity: O(N^2)</p>
+						<p>Space complexity: O(1)</p>
+					</div>
+				</a>
+				<a class="algorithm-button" id="cocktailSort" onclick="changeAlgorithmType('cocktailSort')">Cocktail Sort
+					<div class="details-text">
+						<p>Time complexity: O(N^2)</p>
+						<p>Space complexity: O(1)</p>
+					</div>
+				</a>
+				<a class="algorithm-button" id="selectionSort" onclick="changeAlgorithmType('selectionSort')">Selection Sort
+					<div class="details-text">
+						<p>Time complexity: O(N^2)</p>
+						<p>Space complexity: O(1)</p>
+					</div>
+				</a>
+				<a class="algorithm-button" id="insertionSort" onclick="changeAlgorithmType('insertionSort')">Insertion Sort
+					<div class="details-text">
+						<p>Time complexity: O(N^2)</p>
+						<p>Space complexity: O(1)</p>
+					</div>
+				</a>
+				<div class="algorithm-selector-bubble"></div>
+			</div>
+			<div class="size-selector">
+				<p>Array size: <span id="size-text">55</span></p>
+				<div class="slider-container">
+					<input type="range" min="10" max="100" value="55" step="5" class="slider">
+				</div>
+			</div>
+			<div class="main-buttons">
+				<a class="new-array-button" onclick="newArray()">New Array</a>
+				<a class="sort-button" onclick="runSort()">Sort</a>
+			</div>
+		</div>
+		<div class="container">
+			<!-- array elements by JS -->
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
